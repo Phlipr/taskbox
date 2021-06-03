@@ -16,5 +16,5 @@ jobs:
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub actions
         with:
-          projectToken: ${{ secrets.cf16d87c0418 }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
