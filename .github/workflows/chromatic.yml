@@ -1,0 +1,20 @@
+# Workflow name
+name: 'Chromatic Deployment'
+
+# Event for the workflow
+on: push
+
+# List of jobs
+jobs:
+  test:
+    # Operating System
+    runs-on: unbuntu-latest
+    # Job steps
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn
+      - uses: chromaui/action@v1
+        # Options required for Chromatic's GitHub actions
+        with:
+          projectToken: ${{ secrets.60b958e7fa5fd4003910c337 }}
+          token: ${{ secrets.GITHUB_TOKEN }}
